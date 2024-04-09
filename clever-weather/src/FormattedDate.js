@@ -1,15 +1,15 @@
 import React from "react";
 
 export default function FormattedDate (props){
-    console.log(props.date);
+   
 let days= [
     "Sunday", 
     "Monday",
-     "Tuesday",
-     "Wednesday",
-      "Thursaday", 
-      "Saturday",
-       "Sunday"
+    "Tuesday",
+    "Wednesday",
+    "Thursday", 
+    "Saturday",
+    "Sunday"
     ]
     let day = days[props.date.getDay()];
     let hours = props.date.getHours();
