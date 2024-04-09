@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import axios from"axios";
 import "./Weather.css";
 import "./App.js";
+import FormattedDate from "./FormattedDate.js"
 
 
 export default function Weather(props){
@@ -19,7 +20,7 @@ export default function Weather(props){
           wind:response.data.wind.speed,
           description:response.data.weather[0].description,
           iconUrl:"https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.creativefabrica.com%2Fwp-content%2Fuploads%2F2021%2F03%2F31%2Fweather-icon-illustration03-Graphics-10205167-1.jpg&tbnid=dLL2bxvENuyu9M&vet=12ahUKEwjIx6me9bSFAxXyygIHHSF2CPUQMygBegQIARBY..i&imgrefurl=https%3A%2F%2Fwww.creativefabrica.com%2Fde%2Fproduct%2Fweather-icon-illustration-03-2%2F&docid=rF6zIn6U5dmFMM&w=3400&h=2200&q=weather%20icon&ved=2ahUKEwjIx6me9bSFAxXyygIHHSF2CPUQMygBegQIARBY",
-          date:"Wednesday 07:00"
+          date:new Date (response.data.dt*1000)
 
          }
       )
@@ -45,11 +46,10 @@ export default function Weather(props){
          </div>
     </form>
     <h1>{weatherData.city}</h1>
-       <ul>
-         <li>{weatherData.date} </li>
+         <li>
+            <FormattedDate date={weatherData.date}  /> </li>
          <li className="text-capitalize">{weatherData.description}</li>
-      </ul>
-
+      
          <div className="row">
             <div className="col-6">
              <img
