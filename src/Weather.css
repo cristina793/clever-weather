@@ -11,8 +11,9 @@
 
 .Weather h1{
   color: #C9356C;
+
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 600;
     line-height: 29px;
     margin: 20px 0 0 0;
 
@@ -36,15 +37,16 @@
     line-height: 64px;
     font-size:64px;
     margin-left: 10px;
+    
 }
 .Weather .unit{
     font-size: 16px;
-   color: #233142;
+   color:  #FF347F;
    font-weight: 400;
    position:relative;
    line-height: 1;
    top:-34px;
-   margin-left: 0px;
+   margin: 0px;
 
 }
 .Weather a {
@@ -56,8 +58,4 @@
     margin-right: 10px;
     
 }
-@media (max-width: 960px){
-    .Weather .temperature{font-size: 48px;}
-    .Weather .unit{font-size: 12px;}
 
-}
