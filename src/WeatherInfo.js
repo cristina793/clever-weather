@@ -5,7 +5,7 @@ import WeatherTemperature from "./WeatherTemperature.js"
 
 export default function WeatherInfo(props){
     return (
-    <div className="WeatherInfo">
+    <div className="WeatherInfo  container">
         <h1>{props.data.city}</h1>
         
          <li>
